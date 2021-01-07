@@ -1,0 +1,192 @@
+body {
+    font-family: 'Limelight', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: cyan;
+    background-image: url('/images/palmtrees.jpg');
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Limelight', cursive;
+    background-color: cyan;
+    color: black;
+    width: 140px;
+    height: 40px;
+    border: none;
+    transition: all .5s;
+}
+
+button:hover {
+    font-size: 20px;
+    background-color: #ff6ec7;
+    color: white;
+    height: 50px;
+    width: 160px;
+}
+
+button:active {
+    color: lime;
+    font-weight: bold;
+}
+
+
+h1 {
+    font-size: 4rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+    color: white;
+    font-size: 40px;
+    background: -webkit-linear-gradient(#eee, #ff6ec7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 600px;
+}
+
+#container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+#score {
+    border-radius: 10px;
+    text-align: center;
+    color: #ff6ec7;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: black;
+    width: 14rem;
+    margin-bottom: 30px;
+}
+
+/* should be 10 units across, 40px units */
+#board {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: calc(18 * 30px); 
+    width: calc(16 * 30px);
+    background-color: cyan;
+    background: -webkit-linear-gradient(yellow, white);
+    -webkit-text-fill-color: transparent;
+    /* border: 1px solid black; */
+}
+/* 
+#test {
+    bottom: 0px;
+    left: 0px;
+} */
+
+.blank {
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: none;
+    border: 1px solid brown;
+}
+
+.active {
+    border-radius: 10px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: purple;
+    /* animation: pulsepurple .1s infinite alternate; */
+    /* border: 1px solid white; */
+}
+
+.static {
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    animation: pulse 1s infinite alternate;
+    transition: .1s;
+    /* border: 1px solid white; */
+}
+
+#rules {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: white;
+}
+
+#restart {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    height: 150px;
+    width: 400px;
+}
+
+#bonus {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    background-color: none;
+    color: blue;
+    height: 100px;
+    width: 400px;
+    animation: float 1.5s;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .2;
+        transform: translate(-50%, -100%);
+    }
+}
+
+@keyframes pulse {
+    100% {
+        background-color: #423f3f;
+    }
+}
