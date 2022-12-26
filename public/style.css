@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: cyan;
-    background-image: url('/images/palmtrees.jpg');
+    background-image: url('../images/palmtrees.jpg');
     opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;

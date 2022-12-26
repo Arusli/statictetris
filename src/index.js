@@ -9,8 +9,8 @@
 // - reassigning their properties (color. position, status). and moves these every interval.
 
 
-import Grid from '/src/grid.js';
-import Tetrimino from '/src/tetrimino.js';
+import Grid from '../src/grid.js';
+import Tetrimino from '../src/tetrimino.js';
 const grid = new Grid;
 
 
